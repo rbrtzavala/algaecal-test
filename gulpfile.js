@@ -77,7 +77,8 @@ gulp.task('fonts', function() {
 
 // Cleaning up the dist directory
 gulp.task('clean:dist', function() {
-  return del.sync('dist');
+  return del.sync('dist')
+});
 
 
 
@@ -86,7 +87,7 @@ gulp.task('clean:dist', function() {
 // ------------------------
 
 // Grouped tasks, 'default' allows script to run by just using command 'gulp'
-gulp.tasdk('default', function(callback) {
+gulp.task('default', function(callback) {
   runSequence(['sass', 'browserSync', 'watch'],
     callback
   )
