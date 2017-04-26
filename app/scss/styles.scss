@@ -59,6 +59,8 @@ body#algaecal-test {
   .row {
     margin-top: 18px;;
   }
+
+  .no-margin { margin: 0;}
 }
 
 /*********************
@@ -150,7 +152,7 @@ body#algaecal-test {
     padding: 8px 8px 0 8px;
 
     .bundle {
-      margin-top: 0;
+      margin: 0 0 10px 0;
     }
     h2 {
       color: $primary-color;
@@ -165,7 +167,7 @@ body#algaecal-test {
     box-shadow: $bundle-shadow;
     padding: 13px 8px;
     background: $primary-color;
-    margin: 32px 0 18px 0;
+    margin: 32px 0 35px 0;
 
     .price {
       font-family: $font-semibold;
@@ -195,6 +197,16 @@ body#algaecal-test {
       padding: 8px 15px;
       font-family: $font-semibold;
       font-size: 1em;
+      width: 90%;
+      box-sizing: border-box;
+      display: block;
+      margin: 15px auto;
+
+      img {
+        width: 80px;
+        margin: -25px -8px 0 -25px;
+      }
+
     }
 
     img {
@@ -251,8 +263,8 @@ body#algaecal-test {
       }
     }
 
-    .amount-per-serv:after {
-      background: #000;
+    .amount-per-serv > * {
+      border-bottom: solid 8px #000;;
     }
 
     .solid-bar {
@@ -304,16 +316,27 @@ body#algaecal-test {
     text-align: center;
     font-family: 'glober-semibold';
     display: block;
-    letter-spacing: .08em;
+    letter-spacing: .03em;
     padding: 8px;
   }
+
   .row {
     padding: 10px;
     .col-xs-3 {
       vertical-align: middle;
     }
   }
-  p {color: #000;}
+
+  .tv-logos {
+    max-width: 150px;
+  }
+  p {
+    color: #000;
+    font-size: .75em;
+    .book-title {
+      font-family: $font-semibold-italic;
+    }
+  }
 }
 
 
@@ -326,6 +349,14 @@ body#algaecal-test {
      color: $link-color;;
    }
 
+   li {
+     margin-bottom: 8px;
+   }
+
+   .reference-list {
+     text-decoration: underline;
+     font-family: $font-semibold
+   }
    .addcart {
      color: $primary-color;
      background-color: $green-color;
@@ -335,11 +366,13 @@ body#algaecal-test {
      margin: 20px auto;
      width: 255px;
      display: block;
+
      img {
        width: 100px;
        margin: -28px -8px 0 -30px;
      }
- }
+   }
+
 }
 
 /*****************************
@@ -347,6 +380,7 @@ body#algaecal-test {
  *****************************/
 footer {
   text-align: center;
+  color: #2d2b2b;
 
   img {
     margin: 8px auto;

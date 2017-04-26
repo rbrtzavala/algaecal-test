@@ -62,6 +62,8 @@ body#algaecal-test {
     float: left; }
   body#algaecal-test .row {
     margin-top: 18px; }
+  body#algaecal-test .no-margin {
+    margin: 0; }
 
 /*********************
  ******* Header CTA
@@ -130,7 +132,7 @@ body#algaecal-test {
     background: #008ba4;
     padding: 8px 8px 0 8px; }
     #bundles .most-popular .bundle {
-      margin-top: 0; }
+      margin: 0 0 10px 0; }
     #bundles .most-popular h2, #bundles .most-popular #supplement-facts .panel-heading, #supplement-facts #bundles .most-popular .panel-heading {
       color: #fff;
       font-family: "glober-semibold", sans-serif;
@@ -141,7 +143,7 @@ body#algaecal-test {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
     padding: 13px 8px;
     background: #fff;
-    margin: 32px 0 18px 0; }
+    margin: 32px 0 35px 0; }
     #bundles .bundle .price {
       font-family: "glober-semibold", sans-serif; }
       #bundles .bundle .price .amount {
@@ -160,7 +162,14 @@ body#algaecal-test {
       box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.35) inset;
       padding: 8px 15px;
       font-family: "glober-semibold", sans-serif;
-      font-size: 1em; }
+      font-size: 1em;
+      width: 90%;
+      box-sizing: border-box;
+      display: block;
+      margin: 15px auto; }
+      #bundles .bundle .btn img {
+        width: 80px;
+        margin: -25px -8px 0 -25px; }
     #bundles .bundle img {
       margin: 13px auto; }
     #bundles .bundle .bottle-count {
@@ -195,8 +204,8 @@ body#algaecal-test {
       padding: 0 10px; }
       #supplement-facts table tr td {
         border: none; }
-    #supplement-facts table .amount-per-serv:after {
-      background: #000; }
+    #supplement-facts table .amount-per-serv > * {
+      border-bottom: solid 8px #000; }
     #supplement-facts table .solid-bar {
       background: #000; }
 
@@ -232,20 +241,32 @@ body#algaecal-test {
     text-align: center;
     font-family: 'glober-semibold';
     display: block;
-    letter-spacing: .08em;
+    letter-spacing: .03em;
     padding: 8px; }
   .as-seen .row {
     padding: 10px; }
     .as-seen .row .col-xs-3 {
       vertical-align: middle; }
+  .as-seen .tv-logos {
+    max-width: 150px; }
   .as-seen p {
-    color: #000; }
+    color: #000;
+    font-size: .75em; }
+    .as-seen p .book-title {
+      font-family: "glober-semibold-italic", sans-serif; }
 
 /*************************************
  ******* Scientific References Section
  ***********************************/
 #sci-ref h3 {
   color: #54b8cd; }
+
+#sci-ref li {
+  margin-bottom: 8px; }
+
+#sci-ref .reference-list {
+  text-decoration: underline;
+  font-family: "glober-semibold", sans-serif; }
 
 #sci-ref .addcart {
   color: #fff;
@@ -264,6 +285,7 @@ body#algaecal-test {
  ******* Footer Section
  *****************************/
 footer {
-  text-align: center; }
+  text-align: center;
+  color: #2d2b2b; }
   footer img {
     margin: 8px auto; }
