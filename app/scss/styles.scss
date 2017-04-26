@@ -1,5 +1,222 @@
-$primary-color: white;
+/*********************
+ ******* Site Fonts
+ *********************/
+@import 'fonts';
 
-body {
+
+$primary-color: #fff;
+$green-color: #41ad49;
+$link-color: #54b8cd;
+$bottle-color: #008ba4;
+$bundle-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+$img-center: 13px auto;
+$bg-pattern: url('../images/background.gif') center center;
+
+$font: 'Glober', sans-serif;
+
+body#algaecal-test {
   background: $primary-color;
+  color: #728085;
+  font-size: 20px;
+	font-weight: 400;
+  background-color: #fff;
+  font-family: $font;
+	letter-spacing: -1px;
+
+  .bold {
+    font-family: 'glober-bold', $font
+  }
+  .italic {
+    font-family: 'glober-italic', $font
+  }
+  .bold-italic {
+    font-family: 'glober-bold-italic', $font
+  }
+  .semibold {
+    font-family: 'glober-semibold', $font
+  }
+  .semibold-italic {
+    font-family: 'glober-semibold-italic', $font
+  }
+
+
+  a {
+    color: $link-color;
+  }
+
+}
+
+/*********************
+ ******* Header CTA
+ *********************/
+
+.tap-to-talk {
+  font-size: 1.25em;
+  line-height: 1.25em;
+  margin-top: 15px;
+
+  .glyphicon {
+    color: $primary-color;
+    background-color: $green-color;
+    border-radius: 50px;
+    padding: 5px;
+  }
+}
+
+.jumbotron {
+  background: $bg-pattern;
+
+  .banner, .banner p {
+    color: $primary-color;
+    font-size: 1.25em;
+    line-height: 1.75em;
+
+    .introducing {
+      text-align: center;
+      :before {
+        border-bottom: solid thick white;
+      }
+    }
+  }
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.underline {
+  background: url('../images/underline.png') bottom center no-repeat;
+  padding-bottom: 10px;
+}
+
+/**************************
+ ******* Package Bundles
+ *************************/
+#bundles {
+  margin: 30px 0;
+  font-size: 18px;
+
+
+  .col-sm-4 {
+    margin: 0 0 15px 0;
+  }
+
+  .discount {
+    color: $primary-color;
+    background: #e87b15;
+    display: block;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: $bundle-shadow;
+    text-align: center;
+    line-height: 1.2em;
+    box-sizing: border-box;
+    padding-top: 12px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    transform: rotate(10deg);
+    z-index: 10;
+
+  }
+
+  .most-popular {
+    background: #008ba4;
+    padding: 8px;
+    .bundle{
+      margin-top: 0;
+    }
+    h2 {
+      color: $primary-color;
+      font-size: 1em;
+      letter-spacing: .2em;
+      margin: 0 0 5px  0;
+    }
+  }
+
+  .bundle {
+    box-shadow: $bundle-shadow;
+    padding: 13px 8px;
+    background: $primary-color;
+    margin: 32px 0 18px 0;
+
+    .price {
+      .amount {
+        font-weight: bold;
+        font-size: 2em;
+      }
+      sub {
+        border-bottom: solid thin black;
+        vertical-align: text-top;
+      }
+    }
+
+    .highlight {
+      background: url('../images/highlight.png') center center no-repeat;
+    }
+
+    .btn {
+      color: $primary-color;
+      background-color: $green-color;
+      box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.35) inset;
+      padding: 8px 15px;
+      :before {
+        content: '';
+        background: url('../images/7year.gif');
+      }
+    }
+
+    img {
+      margin: $img-center;
+    }
+
+    .bottle-count {
+      color: $bottle-color;
+    }
+  }
+}
+
+/*****************************
+ ******* Guarantee Section
+ *****************************/
+
+.guarantee {
+  background: $bg-pattern;
+  padding: 25px;
+  box-sizing: border-box;
+
+  .guarantee-inner {
+    background: $primary-color;
+    padding: 18px;
+
+    img {
+      margin: $img-center;
+    }
+
+    h2 {
+      color: #e3742c;
+    }
+  }
+}
+
+/*************************************
+ ******* Supplement Facts Section
+ ***********************************/
+
+/*************************************
+ ******* Scientific References Section
+ ***********************************/
+
+/*****************************
+ ******* Footer Section
+ *****************************/
+footer {
+  text-align: center;
+
+  img {
+    margin: 8px auto;
+  }
 }

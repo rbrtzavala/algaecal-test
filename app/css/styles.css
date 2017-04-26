@@ -1,2 +1,181 @@
-body {
-  background: white; }
+/*********************
+ ******* Site Fonts
+ *********************/
+@font-face {
+  font-family: 'glober';
+  src: url("../fonts/glober-book-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'glober-italic';
+  src: url("../fonts/glober-book-italic-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'glober-bold';
+  src: url("../fonts/glober-bold-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold; }
+
+@font-face {
+  font-family: 'glober-bold-italic';
+  src: url("../fonts/glober-bold-italic-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold-italic; }
+
+@font-face {
+  font-family: 'glober-semibold';
+  src: url("../fonts/glober-semibold-webfont.woff2") format("woff2");
+  font-style: semibold; }
+
+@font-face {
+  font-family: 'glober-semibold-italic';
+  src: url("../fonts/glober-semibold-italic-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: semibold-italic; }
+
+body#algaecal-test {
+  background: #fff;
+  color: #728085;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #fff;
+  font-family: "Glober", sans-serif;
+  letter-spacing: -1px; }
+  body#algaecal-test .bold {
+    font-family: "glober-bold", "Glober", sans-serif; }
+  body#algaecal-test .italic {
+    font-family: "glober-italic", "Glober", sans-serif; }
+  body#algaecal-test .bold-italic {
+    font-family: "glober-bold-italic", "Glober", sans-serif; }
+  body#algaecal-test .semibold {
+    font-family: "glober-semibold", "Glober", sans-serif; }
+  body#algaecal-test .semibold-italic {
+    font-family: "glober-semibold-italic", "Glober", sans-serif; }
+  body#algaecal-test a {
+    color: #54b8cd; }
+
+/*********************
+ ******* Header CTA
+ *********************/
+.tap-to-talk {
+  font-size: 1.25em;
+  line-height: 1.25em;
+  margin-top: 15px; }
+  .tap-to-talk .glyphicon {
+    color: #fff;
+    background-color: #41ad49;
+    border-radius: 50px;
+    padding: 5px; }
+
+.jumbotron {
+  background: url("../images/background.gif") center center; }
+  .jumbotron .banner, .jumbotron .banner p {
+    color: #fff;
+    font-size: 1.25em;
+    line-height: 1.75em; }
+    .jumbotron .banner .introducing, .jumbotron .banner p .introducing {
+      text-align: center; }
+      .jumbotron .banner .introducing :before, .jumbotron .banner p .introducing :before {
+        border-bottom: solid thick white; }
+
+.all-caps {
+  text-transform: uppercase; }
+
+.underline {
+  background: url("../images/underline.png") bottom center no-repeat;
+  padding-bottom: 10px; }
+
+/**************************
+ ******* Package Bundles
+ *************************/
+#bundles {
+  margin: 30px 0;
+  font-size: 18px; }
+  #bundles .col-sm-4 {
+    margin: 0 0 15px 0; }
+  #bundles .discount {
+    color: #fff;
+    background: #e87b15;
+    display: block;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    line-height: 1.2em;
+    box-sizing: border-box;
+    padding-top: 12px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    transform: rotate(10deg);
+    z-index: 10; }
+  #bundles .most-popular {
+    background: #008ba4;
+    padding: 8px; }
+    #bundles .most-popular .bundle {
+      margin-top: 0; }
+    #bundles .most-popular h2 {
+      color: #fff;
+      font-size: 1em;
+      letter-spacing: .2em;
+      margin: 0 0 5px  0; }
+  #bundles .bundle {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    padding: 13px 8px;
+    background: #fff;
+    margin: 32px 0 18px 0; }
+    #bundles .bundle .price .amount {
+      font-weight: bold;
+      font-size: 2em; }
+    #bundles .bundle .price sub {
+      border-bottom: solid thin black;
+      vertical-align: text-top; }
+    #bundles .bundle .highlight {
+      background: url("../images/highlight.png") center center no-repeat; }
+    #bundles .bundle .btn {
+      color: #fff;
+      background-color: #41ad49;
+      box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.35) inset;
+      padding: 8px 15px; }
+      #bundles .bundle .btn :before {
+        content: '';
+        background: url("../images/7year.gif"); }
+    #bundles .bundle img {
+      margin: 13px auto; }
+    #bundles .bundle .bottle-count {
+      color: #008ba4; }
+
+/*****************************
+ ******* Guarantee Section
+ *****************************/
+.guarantee {
+  background: url("../images/background.gif") center center;
+  padding: 25px;
+  box-sizing: border-box; }
+  .guarantee .guarantee-inner {
+    background: #fff;
+    padding: 18px; }
+    .guarantee .guarantee-inner img {
+      margin: 13px auto; }
+    .guarantee .guarantee-inner h2 {
+      color: #e3742c; }
+
+/*************************************
+ ******* Supplement Facts Section
+ ***********************************/
+/*************************************
+ ******* Scientific References Section
+ ***********************************/
+/*****************************
+ ******* Footer Section
+ *****************************/
+footer {
+  text-align: center; }
+  footer img {
+    margin: 8px auto; }
