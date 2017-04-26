@@ -12,7 +12,12 @@ $bundle-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 $img-center: 13px auto;
 $bg-pattern: url('../images/background.gif') center center;
 
-$font: 'Glober', sans-serif;
+$font: 'glober', sans-serif;
+$font-bold: 'glober-bold', sans-serif;
+$font-bold-italic: 'glober-bold-italic', sans-serif;
+$font-italic: 'italic', sans-serif;
+$font-semibold: 'glober-semibold', sans-serif;
+$font-semibold-italic: 'glober-semibold-italic', sans-serif;
 
 body#algaecal-test {
   background: $primary-color;
@@ -44,6 +49,16 @@ body#algaecal-test {
     color: $link-color;
   }
 
+  img {
+    display: block;
+  }
+  img.float-left {
+    float: left;
+  }
+
+  .row {
+    margin-top: 18px;;
+  }
 }
 
 /*********************
@@ -51,25 +66,31 @@ body#algaecal-test {
  *********************/
 
 .tap-to-talk {
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 1.25em;
   margin-top: 15px;
+
+  span {
+    font-size: 1.25em;
+  }
 
   .glyphicon {
     color: $primary-color;
     background-color: $green-color;
     border-radius: 50px;
     padding: 5px;
+    font-size: .75em;
   }
 }
 
 .jumbotron {
   background: $bg-pattern;
+  background-size: cover;;
 
   .banner, .banner p {
     color: $primary-color;
     font-size: 1.25em;
-    line-height: 1.75em;
+    line-height: 1.5em;
 
     .introducing {
       text-align: center;
@@ -95,6 +116,7 @@ body#algaecal-test {
 #bundles {
   margin: 30px 0;
   font-size: 18px;
+  color: #000;
 
 
   .col-sm-4 {
@@ -108,7 +130,6 @@ body#algaecal-test {
     border-radius: 50px;
     width: 70px;
     height: 70px;
-    font-weight: bold;
     font-size: 1.2em;
     box-shadow: $bundle-shadow;
     text-align: center;
@@ -120,18 +141,21 @@ body#algaecal-test {
     right: -10px;
     transform: rotate(10deg);
     z-index: 10;
+    font-family: $font-bold;
 
   }
 
   .most-popular {
     background: #008ba4;
-    padding: 8px;
-    .bundle{
+    padding: 8px 8px 0 8px;
+
+    .bundle {
       margin-top: 0;
     }
     h2 {
       color: $primary-color;
-      font-size: 1em;
+      font-family: $font-semibold;
+      font-size: .8em;
       letter-spacing: .2em;
       margin: 0 0 5px  0;
     }
@@ -144,10 +168,16 @@ body#algaecal-test {
     margin: 32px 0 18px 0;
 
     .price {
+      font-family: $font-semibold;
       .amount {
-        font-weight: bold;
+        font-family: $font-bold;
         font-size: 2em;
       }
+
+      sup {
+        vertical-align: super;
+      }
+
       sub {
         border-bottom: solid thin black;
         vertical-align: text-top;
@@ -163,10 +193,8 @@ body#algaecal-test {
       background-color: $green-color;
       box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.35) inset;
       padding: 8px 15px;
-      :before {
-        content: '';
-        background: url('../images/7year.gif');
-      }
+      font-family: $font-semibold;
+      font-size: 1em;
     }
 
     img {
@@ -175,6 +203,60 @@ body#algaecal-test {
 
     .bottle-count {
       color: $bottle-color;
+    }
+  }
+}
+
+/*************************************
+ ******* Supplement Facts Section
+ ***********************************/
+#supplement-facts {
+  color: #000;
+
+  h2 {
+    font-family: 'glober-bold', $font;
+    text-align: center;
+  }
+
+  .panel-heading {
+    border-top: solid medium #000;
+    border-left: solid medium #000;
+    border-right: solid medium #000;
+    border-bottom: none;
+    background: $primary-color;
+    font-size: 1.5em;
+    @extend h2;
+  }
+
+  .panel-body {
+    font-family: 'glober-bold', $font;
+    border-left: solid medium #000;
+    border-right: solid medium #000;
+
+  }
+
+  table {
+    font-size: .75em;
+    border: solid medium #000;
+    border-top: none;
+    padding: 10px;
+    border-collapse: inherit;
+
+    tr {
+      padding: 0 10px;
+
+      td {
+        border: none;
+        @extend .panel-body;
+      }
+    }
+
+    .amount-per-serv:after {
+      background: #000;
+    }
+
+    .solid-bar {
+      background: #000;
     }
   }
 }
@@ -192,23 +274,73 @@ body#algaecal-test {
     background: $primary-color;
     padding: 18px;
 
+    .dean-sig {
+      margin: 13px auto;
+      display: block;
+      width: 200px;
+      color: #000;
+    }
+
     img {
       margin: $img-center;
     }
 
     h2 {
       color: #e3742c;
+      text-transform: capitalize;;
     }
   }
 }
 
 /*************************************
- ******* Supplement Facts Section
+ ******* As seen on Section
  ***********************************/
+.as-seen {
+  box-shadow: $bundle-shadow;
+
+  .header{
+    color: $primary-color;
+    background: #4C813D;
+    text-align: center;
+    font-family: 'glober-semibold';
+    display: block;
+    letter-spacing: .08em;
+    padding: 8px;
+  }
+  .row {
+    padding: 10px;
+    .col-xs-3 {
+      vertical-align: middle;
+    }
+  }
+  p {color: #000;}
+}
+
 
 /*************************************
  ******* Scientific References Section
  ***********************************/
+ #sci-ref {
+
+   h3 {
+     color: $link-color;;
+   }
+
+   .addcart {
+     color: $primary-color;
+     background-color: $green-color;
+     box-shadow: 0 -8px 0 rgba(0, 0, 0, 0.35) inset;
+     padding: 10px 15px;
+     font-size: 1.5em;
+     margin: 20px auto;
+     width: 255px;
+     display: block;
+     img {
+       width: 100px;
+       margin: -28px -8px 0 -30px;
+     }
+ }
+}
 
 /*****************************
  ******* Footer Section
