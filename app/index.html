@@ -71,6 +71,7 @@
                   id: "cecdwaq3dz",
                   onReady: function(video) {
                     video.bind("crosstime", 133, function() {
+                      var hiddenBundles = document.querySelector('.hidden-bundles')
                       hiddenBundles.setAttribute('style', 'opacity: 1;height: auto');
                     });
                   }
@@ -305,10 +306,6 @@
 
     <!--build:js js/main.min.js -->
     <script src="js/scripts.js"></script>
-    <script>
-      var hiddenBundles = document.querySelector('.hidden-bundles');
-    </script>
-
     <!-- endbuild -->
   </body>
 </html>
