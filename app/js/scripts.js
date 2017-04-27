@@ -2,9 +2,12 @@
   // Get current date and time when page loads
   var today = new Date(),
       day = today.getDay(),
-      hour = today.getHours(),
-      mins = ('0' + today.getMinutes()).substr(-2), // Keeps mins to 2 digits
-      time = `${hour}${mins}`;
+      // Keeps hour to 2 digit
+      hour = ('0' + today.getHours()).substr(-2),
+      // Check for Pacific Time Zone, UTC hours - 7
+      ptzHour = ('0' +( today.getUTCHours() - 7)).substr(-2),
+      mins = ('0' + today.getMinutes()).substr(-2),
+      time = `${ptzHour}${mins}`;
 
 
   // Grab "Speak to Our Bone..." CTA in header
@@ -29,7 +32,8 @@
       if (time >= officeTime[day]['starting_time'] && time <= officeTime[day]['closing_time']) {
         speakCTA.classList.remove('hide');
       }
+      // console.log(time);
     });
 
-    // console.log(`Today is ${day} and the hour is ${hour} and time is ${time}`);
+    // console.log(`Today is ${day} and the hour is ${hour} and ptz is ${ptzHour}`);
 })(jQuery);
