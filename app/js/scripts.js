@@ -7,7 +7,7 @@
       // Check for Pacific Time Zone, UTC hours - 7
       ptzHour = ('0' +( today.getUTCHours() - 7)).substr(-2),
       mins = ('0' + today.getMinutes()).substr(-2),
-      time = `${ptzHour}${mins}`;
+      time = ''+ptzHour+mins;
 
 
   // Grab "Speak to Our Bone..." CTA in header
@@ -35,5 +35,5 @@
       // console.log(time);
     });
 
-    // console.log(`Today is ${day} and the hour is ${hour} and ptz is ${ptzHour}`);
+    //  console.log(`Today is ${day} and time ${time} the hour is ${hour} and ptz is ${ptzHour}`);
 })(jQuery);
