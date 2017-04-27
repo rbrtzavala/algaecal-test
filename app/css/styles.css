@@ -64,6 +64,8 @@ body#algaecal-test {
     margin-top: 18px; }
   body#algaecal-test .no-margin {
     margin: 0; }
+  body#algaecal-test .hide {
+    visibility: hidden; }
 
 /*********************
  ******* Header CTA
@@ -228,7 +230,17 @@ body#algaecal-test {
       margin: 13px auto; }
     .guarantee .guarantee-inner h2, .guarantee .guarantee-inner #supplement-facts .panel-heading, #supplement-facts .guarantee .guarantee-inner .panel-heading {
       color: #e3742c;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      font-family: "glober-semibold", sans-serif; }
+    .guarantee .guarantee-inner .modal-header, .guarantee .guarantee-inner .modal-footer {
+      background: url("../images/background.gif") center center; }
+      .guarantee .guarantee-inner .modal-header .close, .guarantee .guarantee-inner .modal-footer .close {
+        color: white; }
+    .guarantee .guarantee-inner .modal-body {
+      font-size: .8em; }
+      .guarantee .guarantee-inner .modal-body h3 {
+        font-family: "glober-semibold", sans-serif;
+        color: #54b8cd; }
 
 /*************************************
  ******* As seen on Section

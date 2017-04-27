@@ -45,22 +45,16 @@ body#algaecal-test {
   }
 
 
-  a {
-    color: $link-color;
-  }
+  a { color: $link-color; }
 
-  img {
-    display: block;
-  }
-  img.float-left {
-    float: left;
-  }
+  img { display: block; }
+  img.float-left { float: left; }
 
-  .row {
-    margin-top: 18px;;
-  }
+  .row { margin-top: 18px; }
 
-  .no-margin { margin: 0;}
+  .no-margin { margin: 0; }
+
+  .hide { visibility: hidden; }
 }
 
 /*********************
@@ -299,7 +293,28 @@ body#algaecal-test {
 
     h2 {
       color: #e3742c;
-      text-transform: capitalize;;
+      text-transform: capitalize;
+      font-family: $font-semibold;
+    }
+
+    .modal-header, .modal-footer {
+      background: $bg-pattern;
+
+      .close {
+        color: white;
+      }
+    }
+
+    .modal-body {
+      font-size: .8em;
+      h3 {
+        font-family: $font-semibold;
+        color: $link-color;
+      }
+
+      p {
+
+      }
     }
   }
 }
