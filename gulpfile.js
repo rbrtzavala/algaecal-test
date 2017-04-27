@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     userref = require('gulp-useref'),
     uglify = require('gulp-uglify'),
     gulpIf = require('gulp-if'),
+    gutil = require('gulp-util'),
     cssnano = require('gulp-cssnano'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
@@ -55,7 +56,10 @@ gulp.task('useref', function() {
   return gulp.src('app/*.html')
     .pipe(userref())
     // Minifies JS files with uglify
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.js', uglify()).on('error', function(err) {
+gutil.log(gutil.colors.red('[Error]'), err.toString());
+this.emit('end');
+}))
     // Minifies CSS with cssnano
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
@@ -66,7 +70,7 @@ gulp.task('images', function() {
   return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
     // Cache any images that have already been comporessed
     .pipe(cache(imagemin()))
-    .pipe(gulp('dist/images'));
+    .pipe(gulp.dest('dist/images'));
 });
 
 // Copy fonts over to dist directory
@@ -96,8 +100,10 @@ gulp.task('default', function(callback) {
 
 // runSequence here ensures 'clean' is run first before all others
 gulp.task('build', function(callback) {
-  runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
+  runSequence(
+    'clean:dist',
+    'sass',
+    ['useref', 'images', 'fonts'],
     callback
   )
 });
