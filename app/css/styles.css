@@ -91,9 +91,25 @@ body#algaecal-test {
     font-size: 1.25em;
     line-height: 1.5em; }
     .jumbotron .banner .introducing, .jumbotron .banner p .introducing {
-      text-align: center; }
-      .jumbotron .banner .introducing :before, .jumbotron .banner p .introducing :before {
-        border-bottom: solid thick white; }
+      text-align: center;
+      line-height: 1em;
+      overflow: hidden; }
+      .jumbotron .banner .introducing span, .jumbotron .banner p .introducing span {
+        display: inline-block;
+        position: relative; }
+      .jumbotron .banner .introducing span:before, .jumbotron .banner .introducing span:after, .jumbotron .banner p .introducing span:before, .jumbotron .banner p .introducing span:after {
+        content: "";
+        position: absolute;
+        height: 15px;
+        border-bottom: 2px solid white;
+        top: 0;
+        width: 300px; }
+      .jumbotron .banner .introducing span:before, .jumbotron .banner p .introducing span:before {
+        right: 100%;
+        margin-right: 15px; }
+      .jumbotron .banner .introducing span:after, .jumbotron .banner p .introducing span:after {
+        left: 100%;
+        margin-left: 15px; }
 
 .all-caps {
   text-transform: uppercase; }
@@ -109,6 +125,17 @@ body#algaecal-test {
   margin: 30px 0;
   font-size: 18px;
   color: #000; }
+  #bundles h2, #bundles #supplement-facts .panel-heading, #supplement-facts #bundles .panel-heading {
+    font-family: "glober-semibold", sans-serif;
+    color: #54b8cd; }
+  #bundles .hidden-bundles {
+    opacity: 0;
+    height: 0;
+    transition: all 0.5s ease-in; }
+  #bundles .hidden-bundles > * {
+    opacity: inherit;
+    height: inherit;
+    transition: all 1s ease-in; }
   #bundles .col-sm-4 {
     margin: 0 0 15px 0; }
   #bundles .discount {
